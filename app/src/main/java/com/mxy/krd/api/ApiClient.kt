@@ -1,5 +1,6 @@
 package com.mxy.krd.api
 
+import com.google.gson.GsonBuilder
 import com.mxy.krd.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -12,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    private const val API_BASE_URL = ""
+    private const val API_BASE_URL = "https://yesno.wtf/"
     private val mRetrofit: Retrofit by lazy { createRetrofit() }
 
     private fun createRetrofit(): Retrofit {

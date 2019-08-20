@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinRetrofitDemo</string>
+    <string name="button_text">Yes or No?</string>
 </resources>
