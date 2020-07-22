@@ -20,4 +20,5 @@ open class BaseViewModel : ViewModel() {
         super.onCleared()
         viewModelScope.cancel()
     }
+
 }

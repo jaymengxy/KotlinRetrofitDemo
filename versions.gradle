@@ -35,6 +35,7 @@ deps.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
 deps.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
 deps.material = "com.google.android.material:material:$versions.material"
 deps.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
+deps.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerview"
 deps.junit = "junit:junit:$versions.junit"
 deps.okhttp_logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp_logging_interceptor"
 
@@ -45,6 +46,7 @@ deps.activity = activity
 def coroutines = [:]
 coroutines.android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines"
 coroutines.test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
+deps.coroutines = coroutines
 
 def retrofit = [:]
 retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
@@ -55,6 +57,7 @@ deps.retrofit = retrofit
 def fresco = [:]
 fresco.runtime = "com.facebook.fresco:fresco:$versions.fresco"
 fresco.gif = "com.facebook.fresco:animated-gif:$versions.fresco"
+deps.fresco = fresco
 
 def atsl = [:]
 atsl.core = "androidx.test:core:$versions.atsl_core"
