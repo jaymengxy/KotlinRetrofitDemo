@@ -1,6 +1,5 @@
 package com.mxy.krd
 
-import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,11 +13,12 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.mxy.krd.model.AnswerResponse
 import com.mxy.krd.viewmodel.CustomViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     private val mCustomViewModel: CustomViewModel by lazy {
-        ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(CustomViewModel::class.java)
+        ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))[CustomViewModel::class.java]
     }
 
     private val resultObserver = Observer<AnswerResponse> { t -> refreshResult(t) }
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                     .setUri(Uri.parse(it.image))
                     .setAutoPlayAnimations(true)
                     .build()
-            tv_text.text = it.answer.toUpperCase()
+            tv_text.text = it.answer.toUpperCase(Locale.getDefault())
         }
     }
 }
